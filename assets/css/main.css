@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-sans text-gray-800 bg-gray-50;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold
+           bg-gradient-to-br from-primary to-primary-dark text-white
+           shadow-gold transition-all duration-300 hover:-translate-y-1 hover:shadow-gold-hover;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold
+           bg-transparent text-secondary border-2 border-secondary
+           transition-all duration-300 hover:bg-secondary hover:text-white;
+  }
+  
+  .section-padding {
+    @apply py-20;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6;
+  }
+}
+
+@layer utilities {
+  .gradient-gold {
+    @apply bg-gradient-to-br from-primary to-primary-dark;
+  }
+  
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent;
+  }
+}
